@@ -52,6 +52,7 @@ body {
   color: #e9ecef;
   font-size: 1em;
   cursor: pointer;
+ 
 }
 
 .flex {
@@ -90,4 +91,16 @@ section {
   .register .col-2 img {
     display: initial;
   }
+}
+#form > div input[type="time"],
+#form > div input[type="date"],
+#form > .btn {
+  border: 1px solid #e9ecef;
+  padding: 0.6em 1em;
+  width: 90%;
+}
+
+#form > div input[type="time"]:focus,
+#form > div input[type="date"]:focus {
+  outline: none;
 }

@@ -17,7 +17,7 @@ export default function Form() {
     <section>
       <div className="register">
         <div className="col-2">
-          <img src="/images/sign.jpeg" />
+          <img src="/images/form.jpg" />
         </div>
         <div className="col-1">
           <h2>Sign In</h2>
@@ -28,6 +28,7 @@ export default function Form() {
             className="flex flex-col"
             onSubmit={handleSubmit(onSubmit)}
           >
+            
             <input
               type="text"
               {...register("username")}
@@ -55,6 +56,18 @@ export default function Form() {
               {...register("Email adress", { required: true })}
               placeholder=" Email adress "
             />
+            <label
+                    htmlFor="description"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    
+                  </label>
+                  <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    required
+                  />
             <input
               type="text"
               {...register("speciality")}
