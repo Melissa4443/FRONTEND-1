@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { GoogleLogin } from "react-google-login";
 import "./Loginuser.css";
+import Header from "../New folder/search section/header/header"
 
 export default function Loginuser() {
   const {
@@ -18,6 +19,7 @@ export default function Loginuser() {
 
   return (
     <section>
+      <Header />
       <div className="register">
         <div className="col-2">
           <img src="/images/sign.jpeg" alt="Sign In" />
