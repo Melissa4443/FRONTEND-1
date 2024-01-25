@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./Feedback.css"
+import "./Feedback.css";
+import Header from "../New folder/search section/header/header"
 
 export default function Feedback() {
   const {
@@ -15,6 +16,7 @@ export default function Feedback() {
 
   return (
     <section>
+      <Header />
       <div className="register">
         <div className="col-2">
           <img src="/images/sign.jpeg" />
