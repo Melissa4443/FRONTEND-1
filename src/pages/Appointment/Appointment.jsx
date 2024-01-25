@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Appointment.css";
+import Header from "../New folder/search section/header/header"
 
 export default function Appointment(props) {
   const {
@@ -18,6 +19,7 @@ export default function Appointment(props) {
 
   return (
     <section>
+      <Header />
       <div className="register">
         <div className="col-2">
           <img src="/images/appointment.jpg" />
