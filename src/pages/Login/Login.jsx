@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./Login.css"
+import "./Login.css";
 import Header from "../New folder/search section/header/header"
 
 export default function Login() {
