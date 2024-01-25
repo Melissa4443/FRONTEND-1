@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.css";
+import Header from "../New folder/search section/header/header"
 
 export default function Form() {
   const {
@@ -15,6 +16,7 @@ export default function Form() {
 
   return (
     <section>
+      <Header />
       <div className="register">
         <div className="col-2">
           <img src="/images/form.jpg" />
