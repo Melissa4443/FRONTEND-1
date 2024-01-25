@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Form, Login, Feedback, Appointment, UserProfile, Loginadmin, Loginuser} from "./pages";
+import { Form, Login, Feedback, Appointment, UserProfile, Loginadmin, Loginuser, Accueil, Admin, LawyerPage} from "./pages";
 
 // import Layout from "./hocs/Layout";
 
@@ -17,6 +17,11 @@ export default function App() {
             <Route path="/UserProfile" exact element={<UserProfile />} />
             <Route path="/Loginadmin" exact element={<Loginadmin />} />
             <Route path="/Loginuser" exact element={<Loginuser />} />
+            <Route path="/Accueil" exact element={<Accueil />} />
+            <Route path="/Admin" exact element={<Admin />} />
+            <Route path="/LawyerPage" exact element={<LawyerPage />} />
+
+            
             
             
             
