@@ -5,6 +5,12 @@ export { default as Appointment } from "./Appointment/Appointment";
 export { default as UserProfile } from "./UserProfile/UserProfile";
 export { default as Loginadmin } from "./Loginadmin/Loginadmin";
 export { default as Loginuser } from "./Loginuser/Loginuser";
+export { default as Accueil } from "./New folder/Accueil";
+export { default as Admin } from "./New folder/Admin";
+export { default as LawyerPage } from "./New folder/lawyer profile/lawyerPage";
+
+
+
 
 
 
