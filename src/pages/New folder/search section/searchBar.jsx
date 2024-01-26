@@ -152,7 +152,7 @@ const SearchBar = () => {
     const [selectedResult, setSelectedResult] = useState(null);
     const [showDetailsModal, setShowDetailsModal] = useState(false);
     const [selectedLanguage, setSelctedLanguage] = useState('arabic');
-    const [selectedCity, setSelctedCity] = useState('Béjaïa');
+    const [selectedCity, setSelctedCity] = useState('Bejaia');
     const [selectedSpecialty, setSelectedSpecialty] = useState('divorce')
     const [selectedRating, setSelectedRating] = useState(5);
 
