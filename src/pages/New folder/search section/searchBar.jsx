@@ -155,6 +155,9 @@ const SearchBar = () => {
     const [selectedCity, setSelctedCity] = useState('Bejaia');
     const [selectedSpecialty, setSelectedSpecialty] = useState('divorce')
     const [selectedRating, setSelectedRating] = useState(5);
+    
+    
+    const emailAddress = 'example@example.com';
 
 
     //const handleSearch = (e) => {
@@ -405,7 +408,7 @@ const SearchBar = () => {
               </label>
               <button type="submit" onClick={handleSubmitRating}>Submit</button>
               </p>
-              <button style={{position:'absolute', bottom:'10px', right:'10px'}} onClick={() => {setShowDetailsModal(false);}}>Take an appointment</button>
+              <link to={`/appointment?email=${encodeURIComponent(emailAddress)}`}><button style={{position:'absolute', bottom:'10px', right:'10px'}} onClick={() => {setShowDetailsModal(false);}}>Take an appointment</button></link>
             </div>
         </>
       )}

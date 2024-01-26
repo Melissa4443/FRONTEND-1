@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Appointment.css";
 import Header from "../New folder/search section/header/header"
+import { useLocation } from 'react-router-dom';
 
 export default function Appointment(props) {
   const {
@@ -12,6 +13,11 @@ export default function Appointment(props) {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+
+
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const email = params.get('email');
   
   
 
