@@ -1,28 +1,37 @@
-function LawyersLawyer(props){
+import React, { useState, useEffect } from 'react';
 
-    const divStyle={
-        width:'33.33%',
-        textAlign:'center',
-    }
+function LawyersLawyer() {
+    const [lawyers, setLawyers] = useState([]);
 
-
-    const imgStyle={
-        height:'100px',
-        width:'100px',
-        borderRadius: '50%',
-        objectFit: 'cover',
-    }
-
-    const hStyle={
-        color:'black',
-    }
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/lawyers/')
+            .then(response => response.json())
+            .then(data => setLawyers(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
     return (
-        <div style={divStyle}>       
-            <img style={imgStyle} src={props.image} alt='search_image'/>    
-            <h3 style={hStyle}>{props.name}</h3>
-            <p>{props.description}</p>
+        <div>
+            {lawyers.map(lawyer => (
+                <div key={lawyer.avocat_id} style={{ marginBottom: '20px', width: '20%' }}>
+                    
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3>{lawyer.username}</h3>
+                        <img
+                            src={lawyer.image ? lawyer.image.toString() : ''}
+                            alt={`Image de ${lawyer.username}`}
+                            style={{ Width: '50%', height: '50%', borderRadius:'50%'}}
+                        />
+                        <div style={{ fontSize: '14px' }}>
+                            <p>{`Spécialité: ${lawyer.specialite}`}</p>
+                            <p>{`Langue: ${lawyer.langue}`}</p>
+                            <p>{`Adresse: ${lawyer.Adresse}`}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
         </div>
-    )
+    );
 }
-export default LawyersLawyer
+
+export default LawyersLawyer;
