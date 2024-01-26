@@ -11,17 +11,25 @@ function LawyersLawyer() {
     }, []);
 
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            marginTop:'100px'}}>
+                
             {lawyers.map(lawyer => (
-                <div key={lawyer.avocat_id} style={{ marginBottom: '20px', width: '20%' }}>
+                <div key={lawyer.avocat_id} style={{ marginBottom: '20px', width: '19%' }}>
                     
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <h3>{lawyer.username}</h3>
+                        
                         <img
                             src={lawyer.image ? lawyer.image.toString() : ''}
                             alt={`Image de ${lawyer.username}`}
-                            style={{ Width: '50px', height: '50px', borderRadius:'50%'}}
+                            style={{ Width: '40px', height: '40px', borderRadius:'50%'}}
                         />
+                        <h4>{lawyer.username}</h4>
+
                         <div style={{ fontSize: '14px' }}>
                             <p>{`Spécialité: ${lawyer.specialite}`}</p>
                             <p>{`Langue: ${lawyer.langue}`}</p>
