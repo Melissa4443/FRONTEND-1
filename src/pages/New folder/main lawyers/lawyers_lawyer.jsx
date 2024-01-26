@@ -20,7 +20,7 @@ function LawyersLawyer() {
                         <img
                             src={lawyer.image ? lawyer.image.toString() : ''}
                             alt={`Image de ${lawyer.username}`}
-                            style={{ Width: '50%', height: '50%', borderRadius:'50%'}}
+                            style={{ Width: '50px', height: '50px', borderRadius:'50%'}}
                         />
                         <div style={{ fontSize: '14px' }}>
                             <p>{`Spécialité: ${lawyer.specialite}`}</p>
